@@ -1,0 +1,5 @@
+
+    edit {{number}}
+        set start-ip {{start}}
+        set end-ip {{end}}
+    next
