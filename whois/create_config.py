@@ -40,15 +40,8 @@ def write_config(config):
             f.write(i)
 
 
-def check_country(ip):
-    response = requests.get('http://api.ipapi.com/{}?access_key=f36a3251f85cc21a3e998f7a5a26c050'.format(ip))
-    ip_geolocation = json.loads(response.content.decode('utf-8'))["country_code"]
-
-    return ip_geolocation
-
-
 def main():
-    nets = get_cr_nets('ips02.txt')
+    nets = get_cr_nets('ips.txt')
     config = create_template(nets, 591)
     write_config(config)
 
